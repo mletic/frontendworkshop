@@ -7,5 +7,4 @@ function zbir () {
 
     document.getElementById('br3').value = zbir;
     console.log(zbir);
-
 }
