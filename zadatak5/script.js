@@ -5,8 +5,8 @@ function add () {
     var broj = document.getElementById('br1').value;
 
     arrayOfNumbers.push(parseInt(broj));
-    console.log(arrayOfNumbers);
-    console.log('Br elemenata niza: ' + arrayOfNumbers.length);
+    //console.log(arrayOfNumbers);
+    //console.log('Br elemenata niza: ' + arrayOfNumbers.length);
 
     document.getElementById('br1').value = '';
 }
@@ -23,10 +23,26 @@ function sum () {
         sumNum += arrayOfNumbers[i];
     }
 
-    console.log(sumNum);
+    return sumNum;
+}
+
+function sumPrint () {
+
+    var sumNum = sum();
+    document.getElementById('sum').value = sumNum;
 }
 
 //calculates the average value from the array
 function avg () {
 
+    var sumNum = sum();
+    var avgNum = sumNum/arrayOfNumbers.length;
+
+    return avgNum;
+}
+
+function avgPrint () {
+    
+    var avgNum = avg();
+    document.getElementById('avg').value = avgNum;
 }
